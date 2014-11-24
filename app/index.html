@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MEAN</title>
+    <script src="lib/angular/angular.js"></script>
+
+    <script src="app.js"> </script>
+    <script src="indexCtrl.js"></script>
+</head>
+<body ng-controller="IndexCtrl as vm">
+<ul>
+    <li ng-repeat="product in vm.products">
+        {{product.name}}
+    </li>
+
+</ul>
+
+<input type="text" ng-model="vm.newProduct"/>
+<button ng-click="vm.saveProduct(vm.newProduct)">Save Product</button>
+</body>
+</html>
